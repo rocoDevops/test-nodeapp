@@ -10,8 +10,8 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-            sh 'cd nodeapp && sudo aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 857269734878.dkr.ecr.us-east-1.amazonaws.com && sudo docker build . -t 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
-            sh 'sudo docker push 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
+            sh 'cd nodeapp && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 857269734878.dkr.ecr.us-east-1.amazonaws.com && docker build . -t 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
+            sh 'docker push 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
         }
     }
 
