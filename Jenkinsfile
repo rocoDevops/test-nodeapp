@@ -16,13 +16,10 @@ pipeline {
     }
 
   }
-  environment {
-    AWS_DEFAULT_REGION = 'us-east-1'
-  }
   post {
     always {
       deleteDir()
-      sh 'sudo docker 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
+      sh 'sudo docker rmi 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
     }
 
   }
