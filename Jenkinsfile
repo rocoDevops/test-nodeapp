@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-            sh 'cd test-nodeapp && sudo docker build . -t 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
+            sh 'cd nodeapp && sudo docker build . -t 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
             sh 'sudo docker push 857269734878.dkr.ecr.us-east-1.amazonaws.com/assignment:${BUILD_NUMBER}'
         }
     }
