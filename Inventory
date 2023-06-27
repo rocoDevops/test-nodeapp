@@ -1,0 +1,2 @@
+10.0.1.205 ansible_ssh_user=ubuntu ansible_private_key_file="/home/ubuntu/jen-key.pem"
+10.0.2.253 ansible_ssh_user=ubuntu ansible_private_key_file="/home/ubuntu/jen-key.pem"
